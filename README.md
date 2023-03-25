@@ -1,0 +1,1 @@
+Developed a business search responsive website using Angular and Bootstrap, with a backend written in Node.js Express. Implemented searching for businesses by name, distance, and category, view details and map locations, as well as sharing on social media or making reservations
