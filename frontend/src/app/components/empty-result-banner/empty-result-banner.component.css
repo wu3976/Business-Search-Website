@@ -1,0 +1,16 @@
+#nores_banner {
+    width: 100%;
+    border-radius: 15px;
+    background-color: white;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media(min-width:550px) {
+    #nores_banner {
+        width: 550px;
+        margin: auto;
+    }
+}

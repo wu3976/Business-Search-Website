@@ -1,0 +1,70 @@
+#detail_container {
+    width: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: solid 1px rgb(202, 202, 202);
+}
+
+@media(min-width: 880px) {
+    #detail_container {
+        width: 860px;
+        margin: auto;
+    }
+}
+
+#backarrowicon {
+    cursor: pointer;
+}
+
+#header_container {
+    text-align: center;
+}
+
+#buttonarea {
+    width: 200px;
+    margin: auto;
+    text-align: center;
+}
+
+#sharearea {
+    text-align: center;
+}
+
+/deep/ .mat-tab-list {
+    background-color: rgb(255, 230, 0);
+    color: black;
+}
+
+.carus_imgs {
+    width: auto;
+    aspect-ratio: 1/1;
+}
+
+@media (min-width: 450px) {
+    .image_slot {
+        width: 400px;
+        height: 400px;
+        margin: auto;
+    }
+    
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+   
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+#resformheader {
+    text-align: center;
+}
+
+#submit_but_area {
+    width: 200px;
+    margin: auto;
+    text-align: center;
+}

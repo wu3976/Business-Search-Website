@@ -1,0 +1,23 @@
+#bookingpage_container {
+    width: auto;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    color: black;
+}
+
+@media(min-width: 900px) {
+    #bookingpage_container {
+        width: 880px;
+        margin: auto;
+    }
+}
+
+#restable {
+    border-radius: 10px;
+}
+
+#icon {
+    cursor: pointer;
+}

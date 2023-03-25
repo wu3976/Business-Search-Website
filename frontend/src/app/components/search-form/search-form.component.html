@@ -1,0 +1,75 @@
+<div class="p-5" id="searchform_container">
+    <form>
+        <h4 class="my-2 text-center" id="form_header">Business Search</h4>
+        <div class="form-group mt-3">
+            <mat-form-field style="width: 98%;">
+                <label for="kw_input" class="label mb-2">
+                    Keyword <span style="color: red">*</span>
+                </label>
+            
+                <input matInput type="text" id="kw_input" class="form-control inputfield" 
+                name="kw_input" [(ngModel)]="keyword" 
+                [matAutocomplete]="auto" [formControl]="atpctrl" required>
+
+                <mat-autocomplete #auto="matAutocomplete" 
+                (optionSelected)="onoptselected($event.option.value)" [displayWith]="display_with">
+                    <mat-option *ngIf="isLoading" class="is-loading">Loading...</mat-option>
+                    <ng-container *ngIf="!isLoading">
+                        <mat-option *ngFor="let suggest of suggestions" [value]="suggest">
+                            {{ suggest }}
+                        </mat-option>
+                    </ng-container>
+                </mat-autocomplete>
+            </mat-form-field>
+            
+        </div>
+        <div class="d-sm-flex" id="secondline">
+            <div class="form-group" id="distgroup">
+                <label for="dist_input" class="label mb-2">
+                    Distance
+                </label>
+                <input type="number" id="dist_input" class="form-control py-2 inputfield" 
+                name="dist_input" [(ngModel)]="distance" placeholder="10">
+            </div>
+            <div class="form-group ms-sm-4" id="catgroup">
+                <label for="cat_input" class="label mb-2">
+                    Category <span style="color: red">*</span>
+                </label>
+                <!--<select class="form-control py-2 inputfield" id="cat_input" 
+                (change)="changeCategory($event)">
+                    <option *ngFor="let c of CATS" [value]="c.id" 
+                    (change)="changeCategory($event)">{{ c.name }}</option>
+                </select>-->
+                <select class="form-control py-2 inputfield" id="cat_input" 
+                [(ngModel)]="category" name="cat_input" required>
+                    <option *ngFor="let c of CATS" [value]="c.id">{{ c.name }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <label for="loc_input" class="label mb-2">
+                Location <span style="color: red">*</span>
+            </label>
+            <input type="text" id="loc_input" class="form-control py-2 inputfield" 
+            name="loc_input" [(ngModel)]="location" [disabled]="auto_detect" required>
+        </div>
+        <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" name="autodetect" value="" 
+            id="autodetect_box" [(ngModel)]="auto_detect" (click)="autodet_clicked()">
+            <label class="form-check-label" for="autodetect_box">Auto-detect my location</label>
+        </div>
+    </form>
+    <div class="mt-3">
+        <div id="buttonarea">
+            <button type="submit" class="btn btn-danger mr-1" 
+            (click)="submit_clicked()">Submit</button>
+            <button class="btn btn-primary ms-1" (click)="clear_clicked()">Clear</button>
+        </div>
+    </div>
+</div>
+<!--
+{{ keyword }}<br>
+{{ distance }}<br>
+{{ category }}<br>
+{{ location }}<br>
+{{ auto_detect }}-->

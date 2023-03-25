@@ -1,0 +1,8 @@
+<app-search-form (showTableEvent)="showTable($event)" 
+(noResultEvent)="handleNoResult($event)" (clearEvent)="handleCleaning()"></app-search-form>
+<app-result-table [tableData]="result_table_data" [tableVisible]="result_table_visible" 
+(resultClickedEvent)="handleResultClicked($event)" (resButtonEvenet)="handleShowResButton($event)"></app-result-table>
+<app-empty-result-banner [text]="getNoResultText()" [visible]="no_result_banner_visible"></app-empty-result-banner>
+<app-detail-card [data]="detail_data" [options]="detail_map_option" 
+[marker]="detail_map_marker" [visible]="detail_visible" [reviews]="review" [can_reserve]="detail_reserve_button_visible"
+(backEvent)="handleBackEvent()"></app-detail-card>

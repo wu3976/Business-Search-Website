@@ -1,0 +1,14 @@
+@media(max-width: 450px) {
+    a {
+        font-size: 14px;
+    }
+    #bookingtab {
+        margin-right: 30px;
+    }
+}
+
+@media(min-width:450px) {
+    #bookingtab {
+        margin-right: 80px;
+    }
+}

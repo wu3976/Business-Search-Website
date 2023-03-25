@@ -1,0 +1,40 @@
+#result_table_container {
+    width: auto;
+    border: solid 2px rgba(187, 177, 177, 0.534);
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media(max-width:400px) {
+    #result_table_container {
+        font-size: 12px;
+    }
+}
+
+@media(min-width: 1370px) {
+    #result_table_container {
+        width: 1350px;
+        margin: auto;
+    }
+}
+
+#result_table {
+    width: auto;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    cursor: pointer;
+}
+
+.table_img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
